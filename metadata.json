@@ -1,0 +1,6 @@
+{
+  "name": "Last-Minute Life Saver Companion",
+  "description": "An AI-powered study companion and proactive planner designed to help analyze, summarize, and quiz you on concepts, featuring task planning, encrypted storage, and real-time alerts.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

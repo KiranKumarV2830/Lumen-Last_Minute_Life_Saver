@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-gold-text: var(--gold-text);
+  --color-gold-accent: var(--gold-accent);
+  --color-gold-hover: var(--gold-hover);
+  --color-gold-dim: var(--gold-dim);
+  --color-gold-dark: var(--gold-dark);
+  --color-gold-border: var(--gold-border);
+  --color-gold-bg: var(--gold-bg);
+  --color-gold-panel: var(--gold-panel);
+  --color-gold-card: var(--gold-card);
+  --color-gold-input: var(--gold-input);
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Base Light Theme Colors (Default) */
+:root {
+  --gold-text: #1C1917;
+  --gold-accent: #B88E16;
+  --gold-hover: #9E740F;
+  --gold-dim: #E6C875;
+  --gold-dark: #FAF7F2;
+  --gold-border: #E7E2D8;
+  --gold-bg: #FAF9F6;
+  --gold-panel: #F4F1EA;
+  --gold-card: #FFFFFF;
+  --gold-input: #FAF9F6;
+}
+
+/* Dark Theme Colors override when .dark class is added to html element */
+html.dark, .dark {
+  --gold-text: #E0D8D0;
+  --gold-accent: #D4AF37;
+  --gold-hover: #E5C158;
+  --gold-dim: #8A6D1B;
+  --gold-dark: #2A210A;
+  --gold-border: #2A2A2A;
+  --gold-bg: #0A0A0A;
+  --gold-panel: #0F0F0F;
+  --gold-card: #121212;
+  --gold-input: #050505;
+}
+
+/* Global resets supporting dynamic themes */
+html, body {
+  background-color: var(--gold-bg) !important;
+  color: var(--gold-text) !important;
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--gold-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--gold-border);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold-accent);
+}
